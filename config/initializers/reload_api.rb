@@ -33,7 +33,8 @@ if Rails.env.development?
   api_reloader = ActiveSupport::FileUpdateChecker.new(api_files) do
     Rails.application.reload_routes!
   end
-  ActionDispatch::Callbacks.to_prepare do
-    api_reloader.execute_if_updated
-  end
+  # TODO: reactivate once appropriate method to access to_prepare has been identified
+  #ActionDispatch::Callbacks.to_prepare do
+  #  api_reloader.execute_if_updated
+  #end
 end
