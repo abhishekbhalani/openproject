@@ -73,7 +73,7 @@ module WorkPackage::Parent
   end
 
   def changes_applied
-    @parent_id_previous_changes = changes.slice(:parent_id)
+    @parent_id_previous_changes = saved_changes.slice(:parent_id)
 
     super
   end
@@ -101,7 +101,7 @@ module WorkPackage::Parent
   private
 
   def update_parent_relation
-    return unless changes[:parent_id]
+    return unless saved_changes[:parent_id]
 
     if parent_relation
       parent_relation.destroy
