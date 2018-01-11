@@ -148,6 +148,18 @@ describe 'Work package relations tab', js: true, selenium: true do
 
       updated_relation = Relation.find(relation_1.id)
       expect(updated_relation.relation_type).to eq('blocks')
+      expect(updated_relation.from_id).to eq(work_package.id)
+      expect(updated_relation.to_id).to eq(to_1.id)
+
+      relations.edit_relation_type(to_1, to_type: 'blocked')
+
+      expect(page).to have_selector('.relation-row--type', text: 'Blocked')
+      expect(page).to have_selector('.relation-row--type', text: 'Related To')
+
+      updated_relation = Relation.find(relation_1.id)
+      expect(updated_relation.relation_type).to eq('blocks')
+      expect(updated_relation.from_id).to eq(to_1.id)
+      expect(updated_relation.to_id).to eq(work_package.id)
     end
   end
 
