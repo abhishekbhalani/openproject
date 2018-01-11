@@ -40,9 +40,7 @@ gem 'coderay', '~> 1.1.2'
 gem 'rubytree', git: 'https://github.com/dr0verride/RubyTree.git', ref: '06f53ee'
 gem 'rdoc', '>= 2.4.2'
 
-# TODO: reactivate after compatibility with 5.1 has been established
-# or remove if migrations have been squashed
-# gem 'globalize', git: 'https://github.com/globalize/globalize', ref: '38443bcd', require: false
+gem 'globalize', '~> 5.1.0.beta2'
 gem 'omniauth', git: 'https://github.com/oliverguenther/omniauth', ref: '40c6f5f751d2da7cce5444bbd96c390c450440a9'
 gem 'request_store', '~> 1.3.1'
 
