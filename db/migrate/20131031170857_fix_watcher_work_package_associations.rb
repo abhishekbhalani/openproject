@@ -27,7 +27,7 @@
 # See doc/COPYRIGHT.rdoc for more details.
 #++
 
-class FixWatcherWorkPackageAssociations < ActiveRecord::Migration[4.2]
+class FixWatcherWorkPackageAssociations < ActiveRecord::Migration[5.1]
   def up
     rename_watchable_type('Issue', 'WorkPackage')
     adapt_planning_element_ids

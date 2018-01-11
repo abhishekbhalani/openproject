@@ -40,7 +40,7 @@ namespace :migrations do
 
     private
 
-    class TimelinesHistoricalComparisonSetter < ActiveRecord::Migration
+    class TimelinesHistoricalComparisonSetter < ActiveRecord::Migration[5.1]
       include Migration::Utils
 
       def remove_timelines_historical_comparison_from_options

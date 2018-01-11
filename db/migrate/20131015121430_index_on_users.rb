@@ -27,7 +27,7 @@
 # See doc/COPYRIGHT.rdoc for more details.
 #++
 
-class IndexOnUsers < ActiveRecord::Migration[4.2]
+class IndexOnUsers < ActiveRecord::Migration[5.1]
   def change
     add_index :users, [:type, :login], length: { type: 255, login: 255 }
     add_index :users, [:type, :status]

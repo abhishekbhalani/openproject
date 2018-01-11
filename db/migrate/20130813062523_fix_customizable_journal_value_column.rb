@@ -27,7 +27,7 @@
 # See doc/COPYRIGHT.rdoc for more details.
 #++
 
-class FixCustomizableJournalValueColumn < ActiveRecord::Migration[4.2]
+class FixCustomizableJournalValueColumn < ActiveRecord::Migration[5.1]
   def up
     change_column :customizable_journals, :value, :text
   end
